@@ -1,0 +1,13 @@
+<!-- Ô nhập liệu để người dùng nhập dữ liệu -->
+Input data: <input type="text" [(ngModel)]="inputData"><br>
+<hr>
+
+<!-- Sử dụng component con để xử lý dữ liệu -->
+<app-vd11-input-output-comp [data]="inputData" (returnData)="saveData($event)"></app-vd11-input-output-comp>
+<hr>
+
+<!-- Hiển thị danh sách dữ liệu đã lưu -->
+Saved list:<br>
+<ul>
+  <li *ngFor="let item of listData">{{ item }}</li>
+</ul>

@@ -1,0 +1,14 @@
+<h2>ngSwitchCase Example:</h2>
+
+<!-- Ô input để nhập giá trị -->
+<input type="text" [(ngModel)]="inputValue"><br>
+
+<!-- Sử dụng ngSwitch để hiển thị nội dung dựa trên giá trị của inputValue -->
+<span [ngSwitch]="inputValue">
+  <span *ngSwitchCase="'a'">Case A</span>
+  <span *ngSwitchCase="'b'">Case B</span>
+  <span *ngSwitchCase="'c'">Case C</span>
+  <span *ngSwitchDefault>
+    {{ inputValue ? 'No case: ' + inputValue : '' }}
+  </span>
+</span>

@@ -1,0 +1,11 @@
+<h2>Ví dụ sử dụng *ngIf </h2>
+<!-- Sử dụng *ngIf với else -->
+<span *ngIf="canShow; else hideTpl">I'm here!</span><br>
+
+<!-- Nút toggle để thay đổi giá trị của biến canShow -->
+<button type="button" (click)="canShow = !canShow">Toggle show/hide</button>
+
+<!-- Template hiển thị khi *ngIf là false -->
+<ng-template #hideTpl>
+  <span>--------</span>
+</ng-template>

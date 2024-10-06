@@ -1,0 +1,21 @@
+<!-- Sử dụng các built-in pipes trong Angular -->
+Built-in Pipes:<br>
+<!-- Pipe định dạng ngày tháng -->
+Date: {{ today | date: 'dd/MM/yyyy' }}<br>
+
+<!-- Pipe định dạng chữ thành title case -->
+Title case: {{ 'hello world!' | titlecase }}<br>
+
+<!-- Pipe cắt đoạn văn bản -->
+Slice: {{ longText | slice:0:10 }}<br>
+
+<!-- Pipe định dạng số thập phân -->
+Decimal: {{ 12345.67890 | number: '1.0-0' }}<br>
+
+<!-- Pipe async dùng để hiển thị dữ liệu bất đồng bộ -->
+Async:<br>
+<ul>
+  <li *ngFor="let author of listAuthor | async">
+    {{ author.name }}
+  </li>
+</ul>

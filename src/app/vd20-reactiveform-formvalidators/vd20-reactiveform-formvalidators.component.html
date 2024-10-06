@@ -1,0 +1,17 @@
+<form [formGroup]="formBuild">
+  Enter your name: <input type="text" formControlName="yourName"><br>
+  Enter age: <input type="number" formControlName="age"><br>
+  Enter point: <input type="number" formControlName="point"><br>
+</form>
+<br>
+
+<button type="button" (click)="makeFieldRequired()">Make field yourName required</button>
+<button type="button" (click)="makeFieldOptional()">Make field yourName optional</button>
+<br><br>
+
+Form valid: {{ formBuild.valid }}<br>
+Form value: {{ formBuild.value | json }}<br>
+<hr>
+Field "yourName" error: {{ formBuild.get('yourName')?.errors | json }}<br>
+Field "age" error: {{ formBuild.get('age')?.errors | json }}<br>
+Field "point" error: {{ formBuild.get('point')?.errors | json }}<br>

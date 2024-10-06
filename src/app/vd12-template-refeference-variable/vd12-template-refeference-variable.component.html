@@ -1,0 +1,7 @@
+<!-- Sử dụng template variable #userName để lấy giá trị của input -->
+<input #userName><br>
+
+<!-- Khi nhấn nút, gọi hàm saveName và truyền giá trị từ userName -->
+<button type="button" (click)="saveName(userName.value)">
+  Save name
+</button>

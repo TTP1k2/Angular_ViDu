@@ -1,0 +1,12 @@
+<p>vd10-builtin-directives-ngtemplateoutlet works!</p>
+
+<!-- Sử dụng ngTemplateOutlet để hiển thị các template -->
+ngTemplateOutlet:<br>
+<ng-container *ngTemplateOutlet="greet"></ng-container><br>
+<ng-container *ngTemplateOutlet="eng; context: myContext"></ng-container><br>
+<ng-container *ngTemplateOutlet="vie; context: myContext"></ng-container><br>
+
+<!-- Định nghĩa các template -->
+<ng-template #greet>Hello!</ng-template>
+<ng-template #eng let-name>Hello {{name}}!!</ng-template>
+<ng-template #vie let-person="localVie">Chào {{person}}!!!</ng-template>

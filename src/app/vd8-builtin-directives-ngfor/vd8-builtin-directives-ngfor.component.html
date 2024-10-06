@@ -1,0 +1,10 @@
+<h2>List page:</h2>
+
+<ul>
+  <!-- Sử dụng *ngFor với các tùy chọn isFirst, isLast, index -->
+  <li *ngFor="let page of listPage; let i = index; let isFirst = first; let isLast = last">
+    {{ i + 1 }}. {{ page }}
+    {{ isFirst ? '(Start)' : '' }}
+    {{ isLast ? '(End)' : '' }}
+  </li>
+</ul>

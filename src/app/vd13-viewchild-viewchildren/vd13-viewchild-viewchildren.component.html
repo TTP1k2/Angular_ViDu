@@ -1,0 +1,20 @@
+<!-- Input file ẩn được điều khiển bởi ViewChild -->
+<input #uploadfile type="file" hidden>
+
+<!-- Nút để kích hoạt chọn file -->
+<button (click)="selectFile()">Select file !!!</button>
+
+<hr>
+
+<!-- Các dòng văn bản được điều khiển bởi ViewChildren -->
+<span #lineTpl>Line 1</span><br>
+<span #lineTpl>Line 2</span><br>
+<span #lineTpl>Line 3</span><br>
+<span #lineTpl>Line 4</span><br>
+<span #lineTpl>Line 5</span><br>
+
+<!-- Nút để thay đổi màu sắc của tất cả các dòng thành đỏ -->
+<button (click)="makeAllRed()">Make All red</button>
+
+<!-- Nút để thay đổi màu sắc của dòng đầu tiên thành xanh dương -->
+<button (click)="makeFirstBlue()">Make First blue</button>

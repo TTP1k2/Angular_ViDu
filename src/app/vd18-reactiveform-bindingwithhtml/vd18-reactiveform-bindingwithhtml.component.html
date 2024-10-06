@@ -1,0 +1,18 @@
+<!-- Form Legacy -->
+Legacy ways:<br>
+<form [formGroup]="formLegacy">
+  Enter your name: <input type="text" formControlName="yourName">
+</form>
+<br>
+{{ formLegacy.value | json }}
+
+<br><br>
+<hr>
+
+<!-- Form Builder -->
+Builder ways:<br>
+<form [formGroup]="formBuild">
+  Enter your name: <input type="text" formControlName="yourName">
+</form>
+<br>
+{{ formBuild.value | json }}
